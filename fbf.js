@@ -1,6 +1,6 @@
 let img;
 let poseNet;
-poseNet.flipHorizontal=true;
+
 let poses = [];
 function run(){
     document.getElementById('log').innerHTML="running";
@@ -46,6 +46,7 @@ function modelReady() {
     // When the model is ready, run the singlePose() function...
     // If/When a pose is detected, poseNet.on('pose', ...) will be listening for the detection results 
     // in the draw() loop, if there are any poses, then carry out the draw commands
+    poseNet.flipHorizontal=true;
     poseNet.singlePose(img)
 }
 
