@@ -14,10 +14,19 @@ let poses = [];
 var video_time;
 /*ytplayer = document.getElementById("movie_player");
 ytplayer.getCurrentTime();*/
+
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var video = document.getElementById('video');
+
+
+
 function setup() {
   video_time=document.getElementById("iframeid").getCurrentTime();
   createCanvas(640, 480);
   video = createCapture(VIDEO);
+  video.src="./videos/Taichi_S1_C0.mp4";
   video.size(width, height);
 
   // Create a new poseNet method with a single detection
