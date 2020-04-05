@@ -3,9 +3,9 @@ let poseNet;
 
 let poses = [];
 function run(){
-    document.getElementById('log').innerHTML="running v2.2";
+    document.getElementById('log').innerHTML="running v2.3";
     let i;
-    for (i=0; i<10; i++){
+    for (i=0; i<1; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
         document.getElementById('log').innerHTML="finished i="+i;
