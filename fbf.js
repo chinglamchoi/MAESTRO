@@ -1,16 +1,14 @@
 let img;
 let poseNet;
-
+poseNet.flipHorizontal=true;
 let poses = [];
 function run(){
-    document.getElementById('log').innerHTML="running v2.3";
+    document.getElementById('log').innerHTML="running";
     let i;
-    for (i=0; i<1; i++){
+    for (i=0; i<10; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
-        document.getElementById('log').innerHTML="finished i="+i;
     }
-    document.getElementById('log').innerHTML="finished v2.3";
 }
 function setup(img_dir) {
     createCanvas(640, 360);
@@ -48,7 +46,6 @@ function modelReady() {
     // When the model is ready, run the singlePose() function...
     // If/When a pose is detected, poseNet.on('pose', ...) will be listening for the detection results 
     // in the draw() loop, if there are any poses, then carry out the draw commands
-    //poseNet.flipHorizontal=true;  RESET LATER !!!!!!!
     poseNet.singlePose(img)
 }
 
