@@ -1,13 +1,19 @@
 let img;
 let poseNet;
 let poses = [];
-
-function setup() {
+function run(){
+    let i;
+    for (i=0; i<10; i++){
+        setup('./videos/images/1/'+i+'.jpg');
+        draw();
+    }
+}
+function setup(img_dir) {
     createCanvas(640, 360);
 
     // create an image using the p5 dom library
     // call modelReady() when it is loaded
-    img = createImg('data/runner.jpg', imageReady);
+    img = createImg(img_dir, imageReady);
     // set the image size to the size of the canvas
     img.size(width, height);
 
