@@ -26,7 +26,6 @@ function setup() {
   video_time=document.getElementById("iframeid").getCurrentTime();
   createCanvas(640, 480);
   video = createCapture(VIDEO);
-  video.src="./videos/Taichi_S1_C0.mp4";
   video.size(width, height);
 
   // Create a new poseNet method with a single detection
