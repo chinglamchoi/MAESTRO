@@ -11,8 +11,11 @@ PoseNet example using p5.js
 let video;
 let poseNet;
 let poses = [];
-
+var video_time;
+/*ytplayer = document.getElementById("movie_player");
+ytplayer.getCurrentTime();*/
 function setup() {
+  video_time=document.getElementById("iframeid").getCurrentTime();
   createCanvas(640, 480);
   video = createCapture(VIDEO);
   video.size(width, height);
