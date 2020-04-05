@@ -8,6 +8,7 @@ function run(){
     for (i=0; i<10; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
+        document.getElementById('log').innerHTML="finished i="+i;
     }
     document.getElementById('log').innerHTML="finished v2";
 }
