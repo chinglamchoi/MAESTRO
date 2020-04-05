@@ -1,5 +1,6 @@
 let img;
 let poseNet;
+poseNet.flipHorizontal=true;
 let poses = [];
 function run(){
     document.getElementById('log').innerHTML="running";
@@ -7,7 +8,6 @@ function run(){
     for (i=0; i<10; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
-        await new Promise(r => setTimeout(r, 20000));
     }
 }
 function setup(img_dir) {
