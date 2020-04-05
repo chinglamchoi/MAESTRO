@@ -2,6 +2,7 @@ let img;
 let poseNet;
 let poses = [];
 function run(){
+    document.getElementById('log').innerHTML="running";
     let i;
     for (i=0; i<10; i++){
         setup('./videos/images/1/'+i+'.jpg');
