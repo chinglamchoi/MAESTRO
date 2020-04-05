@@ -7,6 +7,7 @@ function run(){
     for (i=0; i<10; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
+        await new Promise(r => setTimeout(r, 20000));
     }
 }
 function setup(img_dir) {
@@ -18,7 +19,7 @@ function setup(img_dir) {
     // set the image size to the size of the canvas
     img.size(width, height);
 
-    img.hide(); // hide the image in the browser
+    //img.hide(); // hide the image in the browser
     frameRate(1); // set the frameRate to 1 since we don't need it to be running quickly in this case
 }
 
