@@ -1,6 +1,6 @@
 let img;
 let poseNet;
-let version="2.14";
+let version="2.15";
 let poses = [];
 let tempimg= new Img;
 
