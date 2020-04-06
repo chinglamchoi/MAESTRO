@@ -1,7 +1,9 @@
 let img;
 let poseNet;
-let version="2.13";
+let version="2.14";
 let poses = [];
+let tempimg= new Img;
+
 function setbutton(){
     document.getElementById('buttonid').innerHTML=version;
 }
@@ -16,13 +18,14 @@ function run(){
     document.getElementById('log').innerHTML="finished "+version;
 }
 function setup(img_dir) {
-    createCanvas(640, 480);
+    tempimg.src=img_dir;
+    createCanvas(tempimg.width, tempimg.height);
 
     // create an image using the p5 dom library
     // call modelReady() when it is loaded
     img = createImg(img_dir, imageReady);
     // set the image size to the size of the canvas
-    img.size(img.width, img.height);
+    img.size(width, height);
 
     //img.hide(); // hide the image in the browser
     frameRate(1); // set the frameRate to 1 since we don't need it to be running quickly in this case
@@ -59,7 +62,7 @@ function modelReady() {
 // draw() will not show anything until poses are found
 function draw() {
     if (poses.length > 0) {
-        image(img, 0, 0, img.width, img.height);
+        image(img, 0, 0, width, height);
         drawSkeleton(poses);
         drawKeypoints(poses);
         noLoop(); // stop looping when the poses are estimated
