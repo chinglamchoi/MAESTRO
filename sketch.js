@@ -21,7 +21,7 @@ var ctx = canvas.getContext('2d');
 //var video = document.getElementById('video');
 var video = document.getElementById('video').src = "./videos/Taichi_S1_C0.mp4";
 //document.getElementById("video").load();
-video.load()
+video.load();
 
 
 function setup() {
