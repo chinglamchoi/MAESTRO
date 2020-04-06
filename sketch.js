@@ -18,15 +18,19 @@ ytplayer.getCurrentTime();*/
 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-var video = document.getElementById('video');
-
+//var video = document.getElementById('video');
+var video = document.getElementById('video').src = "./videos/Taichi_S1_C0.mp4";
+//document.getElementById("video").load();
+video.load()
 
 
 function setup() {
   video_time=document.getElementById("iframeid").getCurrentTime();
-  createCanvas(640, 480);
-  video = createCapture(VIDEO);
-  video.size(width, height);
+  createCanvas(512, 384);
+  //video = createCapture(VIDEO);
+  //video.size(width, height);
+  var width = 512;
+  var height = 384;
 
   // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
