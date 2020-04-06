@@ -3,14 +3,14 @@ let poseNet;
 
 let poses = [];
 function run(){
-    document.getElementById('log').innerHTML="running v2.3";
+    document.getElementById('log').innerHTML="running v2.4";
     let i;
     for (i=0; i<1; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
         document.getElementById('log').innerHTML="finished i="+i;
     }
-    document.getElementById('log').innerHTML="finished v2.3";
+    document.getElementById('log').innerHTML="finished v2.4";
 }
 function setup(img_dir) {
     createCanvas(640, 360);
@@ -21,7 +21,7 @@ function setup(img_dir) {
     // set the image size to the size of the canvas
     img.size(width, height);
 
-    //img.hide(); // hide the image in the browser
+    img.hide(); // hide the image in the browser
     frameRate(1); // set the frameRate to 1 since we don't need it to be running quickly in this case
 }
 
