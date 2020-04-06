@@ -2,7 +2,9 @@ let img;
 let poseNet;
 let version="2.9";
 let poses = [];
-document.getElementById('buttonid').innerHTML=version;
+function setbutton(){
+    document.getElementById('buttonid').innerHTML=version;
+}
 function run(){
     document.getElementById('log').innerHTML=version;
     let i;
