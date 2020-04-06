@@ -3,7 +3,7 @@ let poseNet;
 
 let poses = [];
 function run(){
-    document.getElementById('log').innerHTML="running v2.5";
+    document.getElementById('log').innerHTML="running v2.7";
     let i;
     for (i=0; i<1; i++){
         setup('./videos/images/1/'+i+'.jpg');
@@ -48,7 +48,7 @@ function modelReady() {
     // When the model is ready, run the singlePose() function...
     // If/When a pose is detected, poseNet.on('pose', ...) will be listening for the detection results 
     // in the draw() loop, if there are any poses, then carry out the draw commands
-    //poseNet.flipHorizontal=true;  RESET LATER !!!!!!!
+    poseNet.flipHorizontal=true;  RESET LATER !!!!!!!
     poseNet.singlePose(img)
 }
 
