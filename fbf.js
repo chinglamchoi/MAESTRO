@@ -16,7 +16,7 @@ function run(){
     document.getElementById('log').innerHTML="finished "+version;
 }
 function setup(img_dir) {
-    createCanvas(640, 360);
+    createCanvas(512, 384);
 
     // create an image using the p5 dom library
     // call modelReady() when it is loaded
