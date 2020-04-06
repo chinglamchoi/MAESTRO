@@ -13,6 +13,7 @@ function run(){
     for (i=0; i<1; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
+        saveCanvas('./videos/out_images/1/'+i+'', '.jpg');
         document.getElementById('log').innerHTML="finished i="+i;
     }
     document.getElementById('log').innerHTML="finished "+version;
