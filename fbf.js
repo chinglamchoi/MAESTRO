@@ -1,6 +1,6 @@
 let img;
 let poseNet;
-let version="2.11";
+let version="2.12";
 let poses = [];
 function setbutton(){
     document.getElementById('buttonid').innerHTML=version;
