@@ -1,10 +1,10 @@
 let img;
 let poseNet;
-let version="2.8";
+let version="2.9";
 let poses = [];
+document.getElementById('buttonid').innerHTML=version;
 function run(){
     document.getElementById('log').innerHTML=version;
-    document.getElementById('buttonid').innerHTML=version'
     let i;
     for (i=0; i<1; i++){
         setup('./videos/images/1/'+i+'.jpg');
