@@ -3,14 +3,14 @@ let poseNet;
 
 let poses = [];
 function run(){
-    document.getElementById('log').innerHTML="running v2.4";
+    document.getElementById('log').innerHTML="running v2.5";
     let i;
     for (i=0; i<1; i++){
         setup('./videos/images/1/'+i+'.jpg');
         draw();
         document.getElementById('log').innerHTML="finished i="+i;
     }
-    document.getElementById('log').innerHTML="finished v2.4";
+    document.getElementById('log').innerHTML="finished v2.5";
 }
 function setup(img_dir) {
     createCanvas(640, 360);
