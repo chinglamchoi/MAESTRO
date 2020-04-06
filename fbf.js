@@ -10,7 +10,7 @@ function run(){
         draw();
         document.getElementById('log').innerHTML="finished i="+i;
     }
-    document.getElementById('log').innerHTML="finished v2.5";
+    document.getElementById('log').innerHTML="finished v2.7";
 }
 function setup(img_dir) {
     createCanvas(640, 360);
