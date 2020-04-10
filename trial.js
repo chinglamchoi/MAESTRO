@@ -19,8 +19,8 @@ var videoIsPlaying;
 
 function setup() {
   videoIsPlaying = false; 
-  createCanvas(640, 360);
-  video = createVideo('dancing.mp4', vidLoad);
+  createCanvas(512, 384);
+  video = createVideo('./videos/Taichi_S1_C0.mp4', vidLoad);
   video.size(width, height);
 
   // Create a new poseNet method with a single detection
