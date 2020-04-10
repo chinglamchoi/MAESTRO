@@ -36,6 +36,13 @@ function setup() {
   draw();
 }
 
+// This function is called when the video loads
+function vidLoad() {
+  video.stop();
+  video.loop();
+  videoIsPlaying = true;
+  document.getElementById('log').innerHTML=('video loaded');
+}
 function modelReady() {
   select('#status').html('Model Loaded');
 }
@@ -87,12 +94,6 @@ function drawSkeleton() {
 }
 
 
-// This function is called when the video loads
-function vidLoad() {
-  video.stop();
-  video.loop();
-  videoIsPlaying = true;
-}
 
 function keyPressed(){
   if (videoIsPlaying) {
