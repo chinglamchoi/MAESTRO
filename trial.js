@@ -20,7 +20,7 @@ var videoIsPlaying;
 function setup() {
   videoIsPlaying = false; 
   createCanvas(512, 384);
-  video = createVideo('./videos/Taichi_S1_C0.mp4', vidLoad);
+  video = createVideo("./videos/Taichi_S1_C0.mp4", vidLoad);
   video.size(width, height);
 
   // Create a new poseNet method with a single detection
@@ -31,7 +31,7 @@ function setup() {
     poses = results;
   });
   // Hide the video element, and just show the canvas
-  video.hide();
+  //video.hide();
   modelReady();
   draw();
 }
